@@ -8,14 +8,12 @@ const profiles = [
   { name: "Naarai", role: "Alumno", folder: "Naarai", file: "indexnaarai.html", initial: "N" },
 ];
 
-const BASE = "../InetecIA";
-
 const container = document.getElementById("profiles");
 
 profiles.forEach((profile) => {
   const card = document.createElement("a");
   card.className = "card" + (profile.role === "Profesor" ? " card-profe" : "");
-  card.href = `${BASE}/${profile.folder}/${profile.file}`;
+  card.href = `./${profile.folder}/${profile.file}`;
 
   card.innerHTML = `
     <div class="avatar">${profile.initial}</div>
