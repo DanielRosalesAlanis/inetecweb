@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Johan Kaleth — Portafolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylesjohan.css">
+</head>
+<body>
+
+  <!-- Pantalla de arranque tipo consola -->
+  <div class="boot-splash" id="bootSplash">
+    <div class="boot-logo">JOHAN KALETH</div>
+    <div class="boot-bar"><span></span></div>
+  </div>
+
+  <!-- Fondo tipo XMB: gradiente + ondas de seda animadas -->
+  <div class="xmb-bg">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+    <div class="scanlines"></div>
+  </div>
+
+  <!-- Reloj estilo esquina superior derecha del XMB -->
+  <div class="xmb-clock" id="clock"></div>
+
+  <main class="xmb" id="xmb">
+
+    <!-- Fila horizontal de categorías (íconos) -->
+    <nav class="xmb-categories" id="categories" aria-label="Categorías del portafolio">
+      <span class="cat-indicator" id="catIndicator"></span>
+      <button class="category" data-cat="inicio" tabindex="0">
+        <span class="icon icon-home"></span>
+        <span class="cat-label">Inicio</span>
+      </button>
+      <button class="category" data-cat="sobre-mi" tabindex="0">
+        <span class="icon icon-user"></span>
+        <span class="cat-label">Sobre mí</span>
+      </button>
+      <button class="category" data-cat="habilidades" tabindex="0">
+        <span class="icon icon-controller"></span>
+        <span class="cat-label">Habilidades</span>
+      </button>
+      <button class="category" data-cat="proyectos" tabindex="0">
+        <span class="icon icon-disc"></span>
+        <span class="cat-label">Proyectos</span>
+      </button>
+      <button class="category" data-cat="contacto" tabindex="0">
+        <span class="icon icon-globe"></span>
+        <span class="cat-label">Contacto</span>
+      </button>
+    </nav>
+
+    <!-- Título de categoría activa -->
+    <div class="active-cat-title" id="activeCatTitle">Inicio</div>
+
+    <!-- Columna vertical de items de la categoría activa -->
+    <div class="xmb-items" id="itemsColumn"></div>
+
+    <!-- Panel de contenido / detalle del item seleccionado -->
+    <section class="xmb-detail" id="detailPanel"></section>
+
+  </main>
+
+  <!-- Barra inferior de ayuda tipo consola -->
+  <footer class="xmb-help">
+    <span>◀ ▶ Cambiar sección</span>
+    <span>▲ ▼ Navegar</span>
+    <span>Enter Seleccionar</span>
+  </footer>
+
+  <!-- Ayuda táctil visible solo en móvil -->
+  <footer class="xmb-help-mobile">
+    <span>👈 👉 Desliza para cambiar de sección</span>
+    <span>Toca un elemento para verlo</span>
+  </footer>
+
+  <script src="appjohan.js"></script>
+</body>
+</html>
